@@ -1,9 +1,12 @@
 # 自写小工具分享
 
-## shellcode_top_ip
+<details>
+<summary>
 
+## shellcode_top_ip
 - robust_top_ips.sh: 一个用于从 web access.log 中统计指定日期（默认今天）响应码为 200 的 IP 出现次数，并列出前 N 个 IP 的小脚本。示例log文件：sample_access.log  
 - 适合 Nginx/Apache 的 common/combined 日志格式。脚本用 awk 单进程统计，然后 sort/head 输出 Top N
+</summary>
 
 ### 快速使用
 - 赋可执行权限（从网络或其他主机下载后需要执行）：
@@ -42,4 +45,4 @@ bash -x ./robust_top_ips.sh -f access.log
 ./robust_top_ips.sh -f access.log -v
 ```
 - 脚本会在关键点调用 `debug` 打印额外信息（受 `-v` 控制）。
-
+</details>
